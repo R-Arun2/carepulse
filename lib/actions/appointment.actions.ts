@@ -7,7 +7,6 @@ import { ID, Query } from "node-appwrite";
 import twilio from 'twilio';
 
 import { Appointment } from "@/types/appwrite.types";
-import App from "next/app";
 
 import {
   APPOINTMENT_COLLECTION_ID,
@@ -142,7 +141,6 @@ export const updateAppointment = async ({
       appointment
     );
     
-  
 
     if (!updatedAppointment) throw Error;
 
