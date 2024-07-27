@@ -142,6 +142,7 @@ export const updateAppointment = async ({
     );
     
 
+    
     if (!updatedAppointment) throw Error;
 
     const smsMessage = `Greetings from CarePulse. Dear Patient ${type === "schedule" ? `Your appointment is confirmed for ${formatDateTime(appointment.schedule!, timeZone).dateTime} with Dr. ${appointment.primaryPhysician}` : `We regret to inform that your appointment for ${formatDateTime(appointment.schedule!, timeZone).dateTime} is cancelled. For Reason:  ${appointment.cancellationReason}`}.`;
